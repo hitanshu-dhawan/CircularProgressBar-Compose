@@ -5,11 +5,14 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        gradlePluginPortal()
     }
 
     dependencies {
         classpath Libs.androidGradlePlugin
         classpath Libs.Kotlin.gradlePlugin
+
+        classpath Libs.KtLint.gradlePlugin
     }
 
 }

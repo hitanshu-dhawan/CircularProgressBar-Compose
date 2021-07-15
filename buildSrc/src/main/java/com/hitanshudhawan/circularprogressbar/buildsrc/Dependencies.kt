@@ -13,6 +13,11 @@ object Libs {
         const val extensions = "org.jetbrains.kotlin:kotlin-android-extensions:$version"
     }
 
+    object KtLint {
+        private const val version = "10.1.0"
+        const val gradlePlugin = "org.jlleitschuh.gradle:ktlint-gradle:$version"
+    }
+
     object AndroidX {
 
         object Activity {

@@ -23,7 +23,7 @@ fun CircularProgressBar(
     backgroundProgressBarColor: Color = Color.Gray,
     backgroundProgressBarWidth: Dp = 3.dp,
     roundBorder: Boolean = false,
-    startAngle: Float = 0f,
+    startAngle: Float = 0f
 ) {
     Canvas(modifier = modifier.fillMaxSize()) {
 
@@ -50,6 +50,5 @@ fun CircularProgressBar(
                 cap = if (roundBorder) StrokeCap.Round else StrokeCap.Butt
             )
         )
-
     }
 }
