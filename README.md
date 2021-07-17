@@ -2,10 +2,55 @@
 
 An android library to easily add CircularProgressBar into your [Jetpack Compose](https://developer.android.com/jetpack/compose) apps.
 
+## Have a Look
+<img src="images/demo.gif" height="600">
 
-## 📄 Licence
+## Usage
+```kotlin
+CircularProgressBar(
+    modifier = Modifier.size(120.dp),
+    progress = 30f,
+    progressMax = 100f,
+    progressBarColor = Color.Blue,
+    progressBarWidth = 20.dp,
+    backgroundProgressBarColor = Color.Gray,
+    backgroundProgressBarWidth = 10.dp,
+    roundBorder = true,
+    startAngle = 90f
+)
 ```
-Copyright (c) 2020 Hitanshu Dhawan
+
+## Supported Properties
+| Property                        | Type       | Default        |
+| ------------------------------- | ---------- | -------------- |
+| `progress`                      | Float      | 0f             |
+| `progressMax`                   | Float      | 100f           |
+| `progressBarColor`              | Color      | Color.Black    |
+| `progressBarWidth`              | Dp         | 7.dp           |
+| `backgroundProgressBarColor`    | Color      | Color.Gray     |
+| `backgroundProgressBarWidth`    | Dp         | 3.dp           |
+| `roundBorder`                   | Boolean    | false          |
+| `startAngle`                    | Float      | 0f             |
+
+## Download
+Add JitPack repository to your root `build.gradle` file
+```
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+Add the dependency to your app `build.gradle` file
+```
+dependencies {
+    implementation 'com.github.hitanshu-dhawan:CircularProgressBar-Compose:1.0.0-rc01'
+}
+```
+
+## Licence
+```
+Copyright (c) 2021 Hitanshu Dhawan
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
