@@ -1,11 +1,16 @@
 # CircularProgressBar for Jetpack Compose
 
-An android library to easily add CircularProgressBar into your [Jetpack Compose](https://developer.android.com/jetpack/compose) apps.
+An android library to easily add circular progress bar into your [Jetpack Compose](https://developer.android.com/jetpack/compose) apps.
+
 
 ## Have a Look
-<img src="images/demo.gif" height="600">
+<p align="center">
+    <img src="images/demo.gif" height="500">
+</p>
+
 
 ## Usage
+
 ```kotlin
 CircularProgressBar(
     modifier = Modifier.size(120.dp),
@@ -20,6 +25,25 @@ CircularProgressBar(
 )
 ```
 
+For animations, you can use any animation API provided by Compose depending on your animation scenario.
+
+```kotlin
+val progress by animateFloatAsState(/* progress value */)
+
+CircularProgressBar(
+    modifier = Modifier.size(120.dp),
+    progress = progress,
+    progressMax = 100f,
+    progressBarColor = Color.Blue,
+    progressBarWidth = 20.dp,
+    backgroundProgressBarColor = Color.Gray,
+    backgroundProgressBarWidth = 10.dp,
+    roundBorder = true,
+    startAngle = 90f
+)
+```
+
+
 ## Supported Properties
 | Property                        | Type       | Default        |
 | ------------------------------- | ---------- | -------------- |
@@ -31,6 +55,7 @@ CircularProgressBar(
 | `backgroundProgressBarWidth`    | Dp         | 3.dp           |
 | `roundBorder`                   | Boolean    | false          |
 | `startAngle`                    | Float      | 0f             |
+
 
 ## Download
 Add JitPack repository to your root `build.gradle` file
@@ -47,6 +72,7 @@ dependencies {
     implementation 'com.github.hitanshu-dhawan:CircularProgressBar-Compose:1.0.0-rc01'
 }
 ```
+
 
 ## Licence
 ```
