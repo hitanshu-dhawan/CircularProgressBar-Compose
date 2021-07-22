@@ -1,9 +1,11 @@
 import com.hitanshudhawan.circularprogressbar.buildsrc.Libs
+import com.hitanshudhawan.circularprogressbar.buildsrc.Versions
 
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
     id 'org.jlleitschuh.gradle.ktlint'
+    id 'maven-publish'
 }
 
 android {
@@ -12,8 +14,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        versionCode Versions.CircularProgressBarCompose.versionCode
+        versionName Versions.CircularProgressBarCompose.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -60,4 +62,18 @@ dependencies {
     implementation Libs.AndroidX.Compose.runtime
     implementation Libs.AndroidX.Compose.runtimeLiveData
     implementation Libs.AndroidX.Compose.tooling
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = 'com.github.hitanshu-dhawan'
+                artifactId = 'CircularProgressBar-Compose'
+                version = Versions.CircularProgressBarCompose.versionName
+            }
+        }
+    }
 }
