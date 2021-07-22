@@ -1,5 +1,9 @@
 # CircularProgressBar for Jetpack Compose
 
+[![](https://jitpack.io/v/hitanshu-dhawan/CircularProgressBar-Compose.svg)](https://jitpack.io/#hitanshu-dhawan/CircularProgressBar-Compose)
+[![CircleCI](https://circleci.com/gh/hitanshu-dhawan/CircularProgressBar-Compose.svg?style=svg)](https://circleci.com/gh/hitanshu-dhawan/CircularProgressBar-Compose)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/6ddeb07650b249cb9a6954919ce74c8e)](https://www.codacy.com/gh/hitanshu-dhawan/CircularProgressBar-Compose/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hitanshu-dhawan/CircularProgressBar-Compose&amp;utm_campaign=Badge_Grade)
+
 An android library to easily add circular progress bar into your [Jetpack Compose](https://developer.android.com/jetpack/compose) apps.
 
 
